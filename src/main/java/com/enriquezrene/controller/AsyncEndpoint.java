@@ -28,7 +28,6 @@ public class AsyncEndpoint {
     public DeferredResult<String> process(@RequestBody String message) {
         DeferredResult<String> response = new DeferredResult<>();
         asyncService.process(message, response);
-        LOG.info("---> Task started with: " + message);
         return response;
     }
 
